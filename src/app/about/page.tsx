@@ -1,9 +1,13 @@
+/* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
 import { Instagram } from "lucide-react";
+import React from "react";
 
 export default function page() {
+  const text =
+    "I am a highly motivated and self-taught programmer with a strong passionfor software development. Despite my lack of formal experience, I have adeep understanding of a variety of programming languages and frameworks,and I am eager to learn new technologies. I am also a creative problemsolver with a knack for finding elegant solutions to complex problems.";
   return (
-    <main className="text-center">
+    <main className="text-center relative">
       <div className="profile">
         <Image
           className=" radial-progress"
@@ -20,7 +24,7 @@ export default function page() {
       <h2 className="text-xl flex justify-center">
         <a
           href="https://www.instagram.com/dark.dev.23/"
-          className=" text-sm visited: text-pink-500 hover:text-blue-500 flex"
+          className=" text-sm visited:text-pink-500 hover:text-blue-500 flex"
         >
           <Instagram className="w-4 h-4 my-auto" />
           <span className="px-1">Instagram</span>
@@ -33,10 +37,14 @@ export default function page() {
           <span className="text-green-300">India</span>.
         </p>
       </div>
-      {/* <audio autoPlay>
-        <source src="/buleya.mp3" type="audio/mpeg" />
-        Your browser does not support the audio element.
-      </audio> */}
+      <div className="about-me">
+        <div className="typewriter"></div>
+      </div>
+      <footer className="footer footer-center p-4 bg-base-300 text-base-content fixed bottom-0">
+        <aside>
+          <p>Copyright © 2023 - All right reserved by darkx.dev.23@gmail.com</p>
+        </aside>
+      </footer>
     </main>
   );
 }
