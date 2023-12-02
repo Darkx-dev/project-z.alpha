@@ -1,14 +1,13 @@
 "use client";
  
-import { ChevronDown, } from "lucide-react";
+import { Menu } from "lucide-react";
 import Link from "next/link";
 
 export default function Dropdown() {
   return (
     <details className="dropdown dropdown-end">
-      <summary className="m-1 btn">
-        <span>Dropdown</span>
-        <ChevronDown className="w-5 h-5" />
+      <summary className="m-1 btn bg-transparent">
+        <Menu className="w-5 h-5" />
       </summary>
       <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
         <li>
