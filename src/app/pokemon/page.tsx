@@ -1,7 +1,10 @@
-import React from 'react'
+import PokemonList from "./PokemonList"
 
-export default function page() {
+export default function PokemonPage() {
+
   return (
-    <div>page</div>
-  )
+    <main>
+      <PokemonList/>
+    </main>
+  );
 }
