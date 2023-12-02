@@ -1,12 +1,7 @@
-import { useEffect, useState } from "react";
-import PokemonList from "./PokemonList";
+import React from 'react'
 
-export default async function PokemonPage() {
-  
-
+export default function page() {
   return (
-    <main className="p-2">
-      <PokemonList/>
-    </main>
-  );
+    <div>page</div>
+  )
 }
