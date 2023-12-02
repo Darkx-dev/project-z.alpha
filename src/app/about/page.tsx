@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import Image from "next/image";
+import { Image } from "@nextui-org/react";
 import { Instagram } from "lucide-react";
 import React from "react";
 
