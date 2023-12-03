@@ -4,8 +4,11 @@ import { useState, useEffect } from "react";
 import Card from "@/components/Card";
 import { getPokemonList } from "@/services/pokedexService";
 
-export default function PokemonList(name: string) {
-  const [pokemons, setPokemons] = useState([]);
+interface Pokemon {
+  name: string;
+}
+export default function PokemonList() {
+  const [pokemons, setPokemons] = useState<Pokemon[]>([]);
 
   useEffect(() => {
     const fetchPokemons = async () => {
