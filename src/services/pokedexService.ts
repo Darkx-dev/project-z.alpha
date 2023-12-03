@@ -17,7 +17,7 @@ export const getPokemonList = async (limit = 20, offset = 0) => {
 
 export const getPokemonByName = async (name: string) => {
   try {
-    const pokemon = await P.getPokemonByName(name);
+    const pokemon = P.getPokemonByName(name);
     return pokemon;
   } catch (error) {
     console.error('Error fetching Pokemon:', error);
