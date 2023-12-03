@@ -1,14 +1,15 @@
-"use client"
+/* eslint-disable @next/next/no-img-element */
+import Link from "next/link";
 
 export default function Card({ name, order, a }: any) {
-
   return (
-    <div className="card card-side bg-base-100 shadow-xl my-2 mx-1">
+    <div className="card w-full bg-base-100 shadow-xl my-2">
+        {/* <figure><img src={P} alt="Shoes" /></figure> */}
       <div className="card-body">
-        <h2 className="card-title">{name}</h2>
+        <h2 className="card-title">{name.toUpperCase()}</h2>
         <p>order</p>
         <div className="card-actions justify-end">
-          <button className="btn btn-primary">More</button>
+          <Link href={`/pokemon/${name}`} className="btn btn-primary">More</Link>
         </div>
       </div>
     </div>
