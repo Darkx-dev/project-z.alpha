@@ -1,0 +1,23 @@
+import Pokedex from 'pokedex-promise-v2';
+
+const P = new Pokedex();
+
+export const getPokemonByName = async (name: string) => {
+  try {
+    const pokemon = await P.getPokemonByName(name);
+    return pokemon;
+  } catch (error) {
+    console.error('Error fetching Pokemon:', error);
+    return null;
+  }
+};
+
+export const getPokemonAbilities = async (name: string) => {
+  try {
+    const abilities = await P.getAbilityByName(name);
+    return abilities;
+  } catch (error) {
+    console.error('Error fetching abilities:', error);
+    return null;
+  }
+};
