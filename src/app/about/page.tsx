@@ -7,10 +7,10 @@ export default function page() {
   const text =
     "I am a highly motivated and self-taught programmer with a strong passionfor software development. Despite my lack of formal experience, I have adeep understanding of a variety of programming languages and frameworks,and I am eager to learn new technologies. I am also a creative problemsolver with a knack for finding elegant solutions to complex problems.";
   return (
-    <main className="text-center relative">
-      <div className="profile">
+    <main className="text-center relative ">
+      <div className="profile mx-auto w-fit">
         <Image
-          className=" radial-progress"
+          className="radial-progress"
           src="/profile.jpg"
           width={100}
           height={100}
