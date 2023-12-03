@@ -1,38 +1,36 @@
-/* eslint-disable @next/next/no-img-element */
-// "use client";
-import React from "react";
-import Pokedex from 'pokedex-promise-v2';
+"use client";
+// pages/pokemonList.js
+import { useState, useEffect } from "react";
 import Card from "@/components/Card";
+import { getPokemonList } from "@/services/pokedexService";
 
-import { getPokemonByName, getPokemonAbilities } from '@/services/pokedexService';
+export default function PokemonList(name: string) {
+  const [pokemons, setPokemons] = useState([]);
 
+  useEffect(() => {
+    const fetchPokemons = async () => {
+      const limit = 10; // Set your desired limit
+      const offset = 0; // Set your desired offset
+      const response: any = await getPokemonList(limit, offset);
 
-export default async function PokemonList() {
-  const P = new Pokedex();
-  try {
-    const response = await P.getPokemonsList();
-    if (response && response.results) {
-      return response.results.map(result => (
-        <Card
-          key={result.name}
-          name={result.name}
-        />
-      ))
-    }
-    return null;
-  } catch (error) {
-    console.error('Error fetching Pokemon list:', error);
-    return null;
-  }
-}
+      setPokemons(response.results);
+    };
 
-export async function getStaticProps() {
-  const pokemonName = 'pikachu'; // Replace with the desired Pokemon name
-  const pokemon = await getPokemonByName(pokemonName);
+    fetchPokemons();
+  }, []);
 
-  return {
-    props: {
-      pokemon,
-    },
-  };
+  return (
+    <div>
+      <h1>Results: {pokemons.length} / 10</h1>
+      {pokemons.length === 0 ? (
+        <div>No Pokémon found</div>
+      ) : (
+        <div>
+          {pokemons.map((pokemon, index) => (
+            <Card name={pokemon.name} key={index} />
+          ))}
+        </div>
+      )}
+    </div>
+  );
 }
