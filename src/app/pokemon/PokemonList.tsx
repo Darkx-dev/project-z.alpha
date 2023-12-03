@@ -1,32 +1,38 @@
 /* eslint-disable @next/next/no-img-element */
-"use client";
-
-import Link from "next/link";
+// "use client";
 import React from "react";
+import Pokedex from 'pokedex-promise-v2';
 import Card from "@/components/Card";
-import { useState, useEffect } from "react";
 
-export default function PokemonList() {
-  const [pokemon, setPokemon] = useState([]);
-  const [page, setPage] = useState(1);
-  const [total, setTotal] = useState(0);
-  useEffect(() => {
-    const res = fetch(
-      `https://pokeapi.co/api/v2/pokemon?offset=0&limit=20`
-    ).then((response) => response.json());
-    res.then((data) => {
-      setPokemon(data.results);
-      setTotal(data.count);
-    });
-  }, []);
+import { getPokemonByName, getPokemonAbilities } from '@/services/pokedexService';
 
-  return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-      {pokemon.map((pokemon: any) => {
-        return (
-          <Card key={pokemon.name} name={pokemon.name}/>
-        );
-      })}
-    </div>
-  )
+
+export default async function PokemonList() {
+  const P = new Pokedex();
+  try {
+    const response = await P.getPokemonsList();
+    if (response && response.results) {
+      return response.results.map(result => (
+        <Card
+          key={result.name}
+          name={result.name}
+        />
+      ))
+    }
+    return null;
+  } catch (error) {
+    console.error('Error fetching Pokemon list:', error);
+    return null;
+  }
+}
+
+export async function getStaticProps() {
+  const pokemonName = 'pikachu'; // Replace with the desired Pokemon name
+  const pokemon = await getPokemonByName(pokemonName);
+
+  return {
+    props: {
+      pokemon,
+    },
+  };
 }
