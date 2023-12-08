@@ -24,7 +24,7 @@ export default function page() {
       <h2 className="text-xl flex justify-center">
         <a
           href="https://www.instagram.com/dark.dev.23/"
-          className=" text-sm visited:text-pink-500 hover:text-blue-500 flex"
+          className=" text-sm visited:text-blue-900 font-semibold hover:text-blue-500 flex"
         >
           <Instagram className="w-4 h-4 my-auto" />
           <span className="px-1">Instagram</span>
