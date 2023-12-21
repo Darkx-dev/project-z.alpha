@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Card(params: any) {
   return (
-    <div className="card w-56 h-72  bg-base-100 shadow-xl image-full">
+    <div className="card flex-grow w-56 h-72  bg-base-100 shadow-xl image-full">
       <figure>
         <img src={params.imgUrl} alt="Shoes" />
       </figure>

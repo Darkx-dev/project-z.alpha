@@ -14,7 +14,7 @@ export default function page() {
       </div>
       <div>
         <div className="projects">Projects</div>
-        <div className="projects-showcase flex flex-wrap justify-between p-2">
+        <div className="projects-showcase flex flex-wrap justify-evenly p-2 gap-5">
           <Card
             title="E-Commerce Project"
             url="https://interactivewindow-df217.web.app/Landing_Page/index.html"
