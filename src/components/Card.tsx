@@ -1,15 +1,21 @@
 /* eslint-disable @next/next/no-img-element */
-import Link from "next/link";
+import React from "react";
 
-export default function Card({ name, order, a }: any) {
+export default function Card(params: any) {
   return (
-    <div className="card w-full bg-base-100 shadow-xl my-2">
-        {/* <figure><img src={P} alt="Shoes" /></figure> */}
-      <div className="card-body">
-        <h2 className="card-title">{name.toUpperCase()}</h2>
-        <p>order</p>
+    <div className="card w-56 h-72  bg-base-100 shadow-xl image-full">
+      <figure>
+        <img src={params.imgUrl} alt="Shoes" />
+      </figure>
+      <div className="card-body transition-all">
+        <h2 className="card-title">{params.title}</h2>
+        <p></p>
         <div className="card-actions justify-end">
-          <Link href={`/pokemon/${name}`} className="btn btn-primary">More</Link>
+          <button className="btn btn-ghost shadow-md backdrop-blur-md">
+            <a style={{textDecoration: 'none'}} className="link" href={params.url}>
+              <span className="text-green-300 ">See Live</span>
+            </a>
+          </button>
         </div>
       </div>
     </div>

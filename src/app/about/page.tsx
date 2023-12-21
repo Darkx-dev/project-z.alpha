@@ -5,7 +5,7 @@ import React from "react";
 
 export default function page() {
   const text =
-    "I am a highly motivated and self-taught programmer with a strong passionfor software development. Despite my lack of formal experience, I have adeep understanding of a variety of programming languages and frameworks,and I am eager to learn new technologies. I am also a creative problemsolver with a knack for finding elegant solutions to complex problems.";
+    "I am a highly motivated and self-taught programmer with a strong passion for software development. Despite my lack of formal experience, I have adeep understanding of a variety of programming languages and frameworks,and I am eager to learn new technologies. I am also a creative problemsolver with a knack for finding elegant solutions to complex problems.";
   return (
     <main className="text-center relative ">
       <div className="profile mx-auto w-fit">
@@ -37,8 +37,9 @@ export default function page() {
           <span className="text-green-300">India</span>.
         </p>
       </div>
-      <div className="about-me">
-        <div className="typewriter"></div>
+      <div className="about-me
+      ">
+        {text}
       </div>
       <footer className="footer footer-center p-4 bg-base-300 text-base-content fixed bottom-0">
         <aside>

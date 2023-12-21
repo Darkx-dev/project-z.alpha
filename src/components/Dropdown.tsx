@@ -1,5 +1,5 @@
 "use client";
-
+import ThemeControl from "./themeControl";
 import { Menu } from "lucide-react";
 import Link from "next/link";
 
@@ -18,6 +18,9 @@ export default function Dropdown() {
         </li>
         <li>
           <Link href="/more" className=" disabled">More?</Link>
+        </li>
+        <li>
+          {/* <ThemeControl/> */}
         </li>
       </ul>
     </details>
