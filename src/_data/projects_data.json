@@ -1,0 +1,33 @@
+[
+  {
+    "id": 1,
+    "name": "E-Commerce Page",
+    "imgUrl": "/ec.png",
+    "liveUrl": "https://interactivewindow-df217.web.app/Landing_Page/index.html"
+  },
+  {
+    "id": 2 ,
+    "name": "Desktop only(for now)",
+    "imgUrl": "/lan.png",
+    "liveUrl": "https://interactivewindow-df217.web.app/Landing_Page_A/index.html" 
+  },
+  {
+    "id": 3,
+    "name": "Rating Component",
+    "imgUrl": "/i.png",
+    "liveUrl": "https://interactivewindow-df217.web.app/Interactive_Rating_Component/index.html" 
+  },
+  {
+    "id": 4,
+    "name": "QR Component",
+    "imgUrl": "/qr.png",
+    "liveUrl": "https://interactivewindow-df217.web.app/QR_Card_Component/index.html"
+  },
+  {
+    "id": 5,
+    "name": "NFT Card",
+    "imgUrl": "/nft.png",
+    "liveUrl": "https://interactivewindow-df217.web.app/NFT_Card_Component/index.html"
+  }
+
+]

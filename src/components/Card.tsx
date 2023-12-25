@@ -12,7 +12,7 @@ export default function Card(params: any) {
         <p></p>
         <div className="card-actions justify-end">
           <button className="btn btn-ghost shadow-md backdrop-blur-md">
-            <a style={{textDecoration: 'none'}} className="link" href={params.url}>
+            <a style={{textDecoration: 'none'}} className="link" href={params.url} target="_blank">
               <span className="text-green-300 ">See Live</span>
             </a>
           </button>
