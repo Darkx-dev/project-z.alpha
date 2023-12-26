@@ -3,7 +3,10 @@ import React from "react";
 
 export default function Card(params: any) {
   return (
-    <div id="project-card" className="card flex-grow w-56 h-72  bg-base-100 shadow-xl image-full">
+    <div
+      id="project-card"
+      className="card flex-grow w-60 h-72 bg-base-100 shadow-xl image-full"
+    >
       <figure>
         <img src={params.imgUrl} alt="Shoes" />
       </figure>
@@ -11,11 +14,16 @@ export default function Card(params: any) {
         <h2 className="card-title">{params.title}</h2>
         <p></p>
         <div className="card-actions justify-end">
-          <button className="btn btn-ghost shadow-md backdrop-blur-md">
-            <a style={{textDecoration: 'none'}} className="link" href={params.url} target="_blank">
+          <a
+            style={{ textDecoration: "none" }}
+            className="link"
+            href={params.url}
+            target="_blank"
+          >
+            <button className="btn btn-ghost shadow-md backdrop-blur-md">
               <span className="text-green-300 ">See Live</span>
-            </a>
-          </button>
+            </button>
+          </a>
         </div>
       </div>
     </div>

@@ -28,6 +28,23 @@
     "name": "NFT Card",
     "imgUrl": "/nft.png",
     "liveUrl": "https://interactivewindow-df217.web.app/NFT_Card_Component/index.html"
+  },
+  {
+    "id": 6,
+    "name": "NFT Card",
+    "imgUrl": "/nft.png",
+    "liveUrl": "https://interactivewindow-df217.web.app/NFT_Card_Component/index.html"
+  },
+  {
+    "id": 7,
+    "name": "NFT Card",
+    "imgUrl": "/nft.png",
+    "liveUrl": "https://interactivewindow-df217.web.app/NFT_Card_Component/index.html"
+  },
+  {
+    "id": 8,
+    "name": "NFT Card",
+    "imgUrl": "/nft.png",
+    "liveUrl": "https://interactivewindow-df217.web.app/NFT_Card_Component/index.html"
   }
-
 ]
